@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createminingmachinesplus:block/iron_ore_deposit"
+    }
+  }
+}

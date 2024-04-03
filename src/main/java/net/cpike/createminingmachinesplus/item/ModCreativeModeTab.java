@@ -23,7 +23,7 @@ public class ModCreativeModeTab {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.TEST.get());
                         pOutput.accept(ModItems.DRILLHEAD.get());
-                        pOutput.accept(ModBlocks.DENSE_IRON_ORE_BLOCK.get());
+                        pOutput.accept(ModBlocks.IRON_ORE_DEPOSIT.get());
                     })
                     .build());
 

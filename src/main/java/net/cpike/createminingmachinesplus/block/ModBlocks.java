@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, CreateMiningMachinesPlus.MODID);
 
-    public static final RegistryObject<Block> DENSE_IRON_ORE_BLOCK = registerBlock("dense_iron_ore_block",
+    public static final RegistryObject<Block> IRON_ORE_DEPOSIT = registerBlock("iron_ore_deposit",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE))
             );
 
