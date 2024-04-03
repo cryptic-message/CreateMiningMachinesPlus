@@ -15,7 +15,7 @@ public class ModItems {
 
     //  to add a new item:
     //      1. first add entry here (see test entry)
-    //      2. in CreateMiningMachinesPlus.java, add a 'event.accept' call to the addCreative function.
+    //      2. (optional) in CreateMiningMachinesPlus.java, add a 'event.accept' call to the addCreative function.
     //      3. go to resources/lang/en_us.json and add an entry to translate for the game
     //      4. go to /models/item and add a <name>.json file, note that <name> must be the 'name:' specified in the RegistryObject<Item> instance.
     //          5. in <name>.json, copy the test example or do other things
@@ -27,6 +27,11 @@ public class ModItems {
             () -> new Item( new Item.Properties() )
     );
     // end of test entry
+
+    public static final RegistryObject<Item> DRILLHEAD = ITEMS.register("drillhead",
+            () -> new Item( new Item.Properties() )
+    );
+
 
 
 

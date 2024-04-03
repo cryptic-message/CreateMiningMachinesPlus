@@ -21,6 +21,7 @@ public class ModCreativeModeTab {
                     .title(Component.translatable("creativetab.createminingmachinesplus_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.TEST.get());
+                        pOutput.accept(ModItems.DRILLHEAD.get());
                     })
                     .build());
 

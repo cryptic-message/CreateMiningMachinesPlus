@@ -1,0 +1,25 @@
+{
+  "type": "crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SCS",
+    "SBS",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "create:iron_sheet"
+    },
+    "C": {
+      "item": "create:cogwheel"
+    },
+    "B": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "createminingmachinesplus:drillhead",
+    "count": 1
+  }
+
+}
