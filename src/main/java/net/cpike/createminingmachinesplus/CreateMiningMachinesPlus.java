@@ -1,6 +1,7 @@
 package net.cpike.createminingmachinesplus;
 
 import com.mojang.logging.LogUtils;
+import net.cpike.createminingmachinesplus.block.ModBlocks;
 import net.cpike.createminingmachinesplus.item.ModCreativeModeTab;
 import net.cpike.createminingmachinesplus.item.ModItems;
 import net.minecraft.client.Minecraft;
@@ -34,6 +35,9 @@ public class CreateMiningMachinesPlus
 
         // Register items
         ModItems.register(modEventBus);
+
+        // Register blocks
+        ModBlocks.register(modEventBus);
 
         // Register creative mode tab
         ModCreativeModeTab.register(modEventBus);

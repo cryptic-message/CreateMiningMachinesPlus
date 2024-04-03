@@ -1,6 +1,7 @@
 package net.cpike.createminingmachinesplus.item;
 
 import net.cpike.createminingmachinesplus.CreateMiningMachinesPlus;
+import net.cpike.createminingmachinesplus.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -22,6 +23,7 @@ public class ModCreativeModeTab {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.TEST.get());
                         pOutput.accept(ModItems.DRILLHEAD.get());
+                        pOutput.accept(ModBlocks.DENSE_IRON_ORE_BLOCK.get());
                     })
                     .build());
 

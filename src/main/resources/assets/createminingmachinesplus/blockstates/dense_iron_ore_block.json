@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createminingmachinesplus:block/dense_iron_ore_block"
+    }
+  }
+}
