@@ -3,6 +3,8 @@ package net.cpike.createminingmachinesplus.block.ore;
 import com.simibubi.create.AllBlockEntityTypes;
 import com.simibubi.create.foundation.block.IBE;
 
+import net.cpike.createminingmachinesplus.CreateMiningMachinesPlus;
+import net.cpike.createminingmachinesplus.block.ModBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -27,7 +29,7 @@ public class OreBlock extends Block implements IBE<OreBlockEntity> {
   public BlockEntityType<? extends OreBlockEntity> getBlockEntityType() {
     // TODO: make ORE class thing like in Basin (which is my inspo) this is located
     // in the allBlockEntity.java file
-    return AllBlockEntityTypes.ORE.get();
+    return CreateMiningMachinesPlus.ORE_BLOCK_ENTITY.get();
   }
 
 }
