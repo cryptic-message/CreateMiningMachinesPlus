@@ -45,18 +45,18 @@ public class ModBlocks {
       .block("mining_drill", MiningDrillBlock::new)
       .initialProperties(SharedProperties::stone)
       // TODO: figure out what properties are needed
-      .properties(p -> p.noOcclusion().color(MaterialColor.STONE))
+      //.properties(p -> p.noOcclusion().color(MaterialColor.STONE))
       .transform(axeOrPickaxe())
       .blockstate((c, p) -> p.simpleBlock(c.getEntry(), AssetLookup.partialBaseModel(c, p)))
-      .transform(BlockStressDefaults.setImpact(4.0))
+      .transform(BlockStressDefaults.setImpact(8.0))
       .item(AssemblyOperatorBlockItem::new)
       .transform(customItemModel())
       .register();
 
-  public static final BlockEntry<OreBlock> RE = REGISTRATE.block("ore", OreBlock::new)
+  public static final BlockEntry<OreBlock> ORE = REGISTRATE.block("ore", OreBlock::new)
       .initialProperties(SharedProperties::stone)
       // TODO: figure out what properties are needed
-      .properties(p -> p.color(MaterialColor.COLOR_GRAY).sound(SoundType.NETHERITE_BLOCK))
+      //.properties(p -> p.color(MaterialColor.COLOR_GRAY).sound(SoundType.NETHERITE_BLOCK))
       .transform(pickaxeOnly())
       .blockstate(new OreGenerator()::generate)
       // TODO: write OreMovementBehaviour to suit mining process
