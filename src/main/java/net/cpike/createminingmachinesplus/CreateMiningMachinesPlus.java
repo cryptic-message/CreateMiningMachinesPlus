@@ -1,7 +1,15 @@
 package net.cpike.createminingmachinesplus;
 
+import com.jozufozu.flywheel.core.PartialModel;
 import com.mojang.logging.LogUtils;
+import static com.simibubi.create.Create.REGISTRATE;
+
+import com.simibubi.create.Create;
+import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import net.cpike.createminingmachinesplus.block.ModBlocks;
+import net.cpike.createminingmachinesplus.block.miningDrill.MiningDrillBlockEntity;
+import net.cpike.createminingmachinesplus.block.miningDrill.MiningDrillRenderer;
+import net.cpike.createminingmachinesplus.block.ore.OreBlockEntity;
 import net.cpike.createminingmachinesplus.item.ModCreativeModeTab;
 import net.cpike.createminingmachinesplus.item.ModItems;
 import net.minecraft.client.Minecraft;
@@ -28,6 +36,31 @@ public class CreateMiningMachinesPlus
     public static final String MODID = "createminingmachinesplus";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    // Register Block Entity Types
+
+    // Register Mining Drill Block Entity type
+    public static final BlockEntityEntry<MiningDrillBlockEntity> MINING_DRILL_BLOCK_ENTITY = REGISTRATE
+            .blockEntity("mining_drill", MiningDrillBlockEntity::new)
+            //.instance(() -> MiningDrillBlockEntity::new, false)  // <- do we need this? what do it do? it giveth red squiggles...
+            .validBlocks(ModBlocks.MINING_DRILL)
+            .renderer(() -> MiningDrillRenderer::new)
+            .register();
+
+    // TODO: finish the ore block entity entry
+    // notes: - no renderer needed as the block entity data can just be
+    // hidden while the block is rendered as a normal block, maybe?
+
+    // Register the Ore Block
+    public static final BlockEntityEntry<OreBlockEntity> ORE_BLOCK_ENTITY = REGISTRATE
+            .blockEntity("ore", OreBlockEntity::new)
+            // .validBlocks()           // Valid ore blocks go here
+            .register();
+
+    // Register partial-model for Mining Drill Head
+    public static final PartialModel MINING_DRILL_HEAD = new PartialModel(Create.asResource("block/mining_drill_head"));
+
+
 
     public CreateMiningMachinesPlus()
     {
@@ -88,4 +121,5 @@ public class CreateMiningMachinesPlus
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
+
 }
